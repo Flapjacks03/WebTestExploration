@@ -26,15 +26,15 @@ namespace WebTestExploration
         {
             IWebElement CheckInput;
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            driver.Navigate().GoToUrl("https://admlucid.com");
-            CheckInput = driver.FindElement(By.LinkText("Login"));
-            wait.Until(ExpectedConditions.UrlToBe("https://admlucid.com/"));
-            CheckInput.Click();
-            wait.Until(ExpectedConditions.UrlToBe("https://admlucid.com/Identity/Account/Login"));
+            driver.Navigate().GoToUrl("https://www.google.com");
+            //CheckInput = driver.FindElement(By.LinkText("Login"));
+            wait.Until(ExpectedConditions.UrlToBe("https://www.google.com/"));
+            //CheckInput.Click();
+            //wait.Until(ExpectedConditions.UrlToBe("https://admlucid.com/Identity/Account/Login"));
             //wait.Until(d => d.Url == "https://admlucid.com/Identity/Account/Login");
             //Assert.That(d.Url.Displayed, Is.True);
-            Assert.That(driver.Url, Is.EqualTo("https://admlucid.com/Identity/Account/Login"));
-            //Assert.That(driver.Url, Is.EqualTo("https://admlucid.com/"));
+            //Assert.That(driver.Url, Is.EqualTo("https://admlucid.com/Identity/Account/Login"));
+            Assert.That(driver.Url, Is.EqualTo("https://www.google.com/"));
             //Assert.Pass();
            
         }
