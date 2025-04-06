@@ -48,8 +48,7 @@ namespace WebTestExploration
             // Login button
             IWebElement loginButton = wait.Until(driver => driver.FindElement(By.Id("login-button")));
             loginButton.Click();
-            Thread.Sleep(2000);
-            
+            Thread.Sleep(2000);  
 
             // Add to cart button
             IWebElement addToCartButton = wait.Until(driver => driver.FindElement(By.Id("add-to-cart-sauce-labs-backpack")));
@@ -61,12 +60,10 @@ namespace WebTestExploration
             cartButton.Click();
             Thread.Sleep(2000);
 
-
             // Checkout button
             IWebElement checkoutButton = wait.Until(driver => driver.FindElement(By.Id("checkout")));
             checkoutButton.Click();
             Thread.Sleep(2000);
-
 
             // First name box element
             IWebElement firstName = wait.Until(driver => driver.FindElement(By.Id("first-name")));
@@ -110,8 +107,6 @@ namespace WebTestExploration
             IWebElement logoutButton2 = wait.Until(driver => driver.FindElement(By.Id("logout_sidebar_link")));
             logoutButton2.Click();
             Thread.Sleep(2000);
-
-
 
         }
 
