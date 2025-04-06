@@ -43,24 +43,75 @@ namespace WebTestExploration
 
             // Input search term and press Enter
             password.SendKeys("secret_sauce");
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
 
             // Login button
             IWebElement loginButton = wait.Until(driver => driver.FindElement(By.Id("login-button")));
             loginButton.Click();
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
             
 
             // Add to cart button
             IWebElement addToCartButton = wait.Until(driver => driver.FindElement(By.Id("add-to-cart-sauce-labs-backpack")));
             addToCartButton.Click();
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
 
             // Cart button
             IWebElement cartButton = wait.Until(driver => driver.FindElement(By.Id("shopping_cart_container")));
             cartButton.Click();
-            Thread.Sleep(3000);
-            
+            Thread.Sleep(2000);
+
+
+            // Checkout button
+            IWebElement checkoutButton = wait.Until(driver => driver.FindElement(By.Id("checkout")));
+            checkoutButton.Click();
+            Thread.Sleep(2000);
+
+
+            // First name box element
+            IWebElement firstName = wait.Until(driver => driver.FindElement(By.Id("first-name")));
+            // Input search term and press Enter
+            firstName.SendKeys("Burat");
+            Thread.Sleep(2000);
+
+            // Last name box element
+            IWebElement lastName = wait.Until(driver => driver.FindElement(By.Id("last-name")));
+            // Input search term and press Enter
+            lastName.SendKeys("Silog");
+            Thread.Sleep(2000);
+
+            // Zip code box element
+            IWebElement zipCode = wait.Until(driver => driver.FindElement(By.Id("postal-code")));
+            // Input search term and press Enter
+            zipCode.SendKeys("696969");
+            Thread.Sleep(2000);
+
+            // Continue button
+            IWebElement continueButton = wait.Until(driver => driver.FindElement(By.Id("continue")));
+            continueButton.Click();
+            Thread.Sleep(2000);
+
+            // Finish button
+            IWebElement finishButton = wait.Until(driver => driver.FindElement(By.Id("finish")));
+            finishButton.Click();
+            Thread.Sleep(2000);
+
+            // Back home button
+            IWebElement backHomeButton = wait.Until(driver => driver.FindElement(By.Id("back-to-products")));
+            backHomeButton.Click();
+            Thread.Sleep(2000);
+
+            // Logout button
+            IWebElement logoutButton = wait.Until(driver => driver.FindElement(By.Id("react-burger-menu-btn")));
+            logoutButton.Click();
+            Thread.Sleep(2000);
+
+            // Logout button
+            IWebElement logoutButton2 = wait.Until(driver => driver.FindElement(By.Id("logout_sidebar_link")));
+            logoutButton2.Click();
+            Thread.Sleep(2000);
+
+
 
         }
 
