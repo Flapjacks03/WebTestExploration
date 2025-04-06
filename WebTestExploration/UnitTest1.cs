@@ -51,6 +51,17 @@ namespace WebTestExploration
             Thread.Sleep(3000);
             
 
+            // Add to cart button
+            IWebElement addToCartButton = wait.Until(driver => driver.FindElement(By.Id("add-to-cart-sauce-labs-backpack")));
+            addToCartButton.Click();
+            Thread.Sleep(3000);
+
+            // Cart button
+            IWebElement cartButton = wait.Until(driver => driver.FindElement(By.Id("shopping_cart_container")));
+            cartButton.Click();
+            Thread.Sleep(3000);
+            
+
         }
 
         [TearDown]
