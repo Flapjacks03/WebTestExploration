@@ -7,6 +7,7 @@ using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
 
+
 namespace WebTestExploration
 {
     public class Tests
@@ -24,18 +25,17 @@ namespace WebTestExploration
         [Test]
         public void Test1()
         {
-            IWebElement CheckInput;
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            driver.Navigate().GoToUrl("https://www.google.com");
-            //CheckInput = driver.FindElement(By.LinkText("Login"));
-            wait.Until(ExpectedConditions.UrlToBe("https://www.google.com/"));
-            //CheckInput.Click();
-            //wait.Until(ExpectedConditions.UrlToBe("https://admlucid.com/Identity/Account/Login"));
-            //wait.Until(d => d.Url == "https://admlucid.com/Identity/Account/Login");
-            //Assert.That(d.Url.Displayed, Is.True);
-            //Assert.That(driver.Url, Is.EqualTo("https://admlucid.com/Identity/Account/Login"));
-            Assert.That(driver.Url, Is.EqualTo("https://www.google.com/"));
-            //Assert.Pass();
+
+            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+
+            // Wait until the search box is present
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
+
+            // Find the username box element
+            IWebElement searchBox = wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("user-name")));
+
+            // Input search term and press Enter
+            searchBox.SendKeys("standard_user");
            
         }
 
